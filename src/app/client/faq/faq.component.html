@@ -1,0 +1,156 @@
+<div class="min-h-screen bg-white py-32 px-4">
+
+  <div class="max-w-4xl mx-auto">
+
+    <!-- TITLE -->
+    <h1 class="text-4xl font-bold text-blue-900 text-center mb-4">
+      FAQ - Exprimer Sports
+    </h1>
+
+    <p class="text-center text-gray-500 mb-12">
+      Tout ce que vous devez savoir sur notre agence de branding sportif
+    </p>
+
+    <!-- FAQ LIST -->
+    <div class="space-y-4">
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(0)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-bullseye"></i>
+            Comment fonctionne notre agence ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 0 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 overflow-hidden transition-all duration-500"
+             [ngClass]="openIndex === 0 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Chez Exprimer Sports, nous accompagnons les sportifs de A à Z :
+          définition des objectifs, création de contenu, mise en avant de votre image et stratégie digitale.
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(1)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-star"></i>
+            Pourquoi faire appel à nos services ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 1 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 transition-all duration-500 overflow-hidden"
+             [ngClass]="openIndex === 1 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Vous travaillez avec une équipe passionnée qui propose des services sur mesure :
+          graphisme, vidéo, photographie et marketing sportif.
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(2)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-video"></i>
+            Pourquoi passer par une agence ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 2 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 transition-all duration-500 overflow-hidden"
+             [ngClass]="openIndex === 2 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Une agence permet de maximiser votre visibilité grâce à une expertise professionnelle
+          et une stratégie adaptée à votre image.
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(3)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-money-bill"></i>
+            Quels sont vos tarifs ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 3 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 transition-all duration-500 overflow-hidden"
+             [ngClass]="openIndex === 3 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Nos tarifs sont personnalisés selon chaque projet :
+          athlètes, clubs, académies ou marques. Chaque devis est adapté à vos besoins.
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(4)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-map-marker-alt"></i>
+            Où êtes-vous situés ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 4 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 transition-all duration-500 overflow-hidden"
+             [ngClass]="openIndex === 4 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Nous sommes basés à Kinshasa (Ngaliema), mais nous travaillons dans toute l’Afrique et à l’international.
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="border rounded-xl overflow-hidden">
+
+        <button (click)="toggle(5)"
+          class="w-full flex justify-between items-center p-5 bg-white hover:bg-blue-50 transition">
+
+          <div class="flex items-center gap-3 text-blue-900 font-semibold">
+            <i class="fas fa-globe"></i>
+            Est-ce uniquement du branding ?
+          </div>
+
+          <i class="fas" [ngClass]="openIndex === 5 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <div class="px-5 pb-5 text-gray-600 transition-all duration-500 overflow-hidden"
+             [ngClass]="openIndex === 5 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+
+          Non, Exprimer Sports est une agence 360° :
+          marketing, stratégie digitale, contenu vidéo, design et accompagnement global.
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

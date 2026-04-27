@@ -11,6 +11,7 @@ import { AboutComponent } from './client/about/about.component';
 import { BlogComponent } from './client/blog/blog.component';
 import { ContactComponent } from './client/contact/contact.component';
 import { TalentComponent } from './client/talent/talent.component';
+import { FaqComponent } from './client/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TalentComponent } from './client/talent/talent.component';
     AboutComponent,
     BlogComponent,
     ContactComponent,
-    TalentComponent
+    TalentComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
