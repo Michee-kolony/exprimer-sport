@@ -1,0 +1,157 @@
+<div class="min-h-screen bg-white py-32">
+
+  <!-- Filtres -->
+  <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-wrap gap-3 justify-center">
+
+      <button class="px-6 py-2 rounded-full bg-blue-900 text-white font-medium">
+        Tous
+      </button>
+
+      <button class="px-6 py-2 rounded-full bg-gray-100 text-blue-900 hover:bg-blue-50 transition">
+        Attaquants
+      </button>
+
+      <button class="px-6 py-2 rounded-full bg-gray-100 text-blue-900 hover:bg-blue-50 transition">
+        Milieux
+      </button>
+
+      <button class="px-6 py-2 rounded-full bg-gray-100 text-blue-900 hover:bg-blue-50 transition">
+        Défenseurs
+      </button>
+
+      <button class="px-6 py-2 rounded-full bg-gray-100 text-blue-900 hover:bg-blue-50 transition">
+        Gardiens
+      </button>
+
+      <button class="px-6 py-2 rounded-full bg-gray-100 text-blue-900 hover:bg-blue-50 transition">
+        Espoirs
+      </button>
+
+    </div>
+  </section>
+
+  <!-- Grille des joueurs -->
+  <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+      <!-- CARD -->
+      <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/LH4A9466.jpg"
+               class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
+
+          <div class="absolute top-4 right-4 bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-bold">
+            ★ 4.9
+          </div>
+
+          <div class="absolute bottom-4 left-4 bg-blue-900 text-white px-3 py-1 rounded-lg text-sm font-semibold">
+            Attaquant
+          </div>
+        </div>
+
+        <div class="p-6 text-blue-900">
+
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <h3 class="text-2xl font-bold">Fredo Shongo</h3>
+              <p class="text-blue-700 text-sm">⭐ Talent d'or 2025</p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold">17</div>
+              <div class="text-xs text-blue-700">ans</div>
+            </div>
+          </div>
+
+          <div class="space-y-2 mb-4 text-sm">
+            <div class="flex justify-between">
+              <span class="text-gray-500">Buts:</span>
+              <span class="font-semibold">24</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Passes décisives:</span>
+              <span class="font-semibold">12</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Matchs:</span>
+              <span class="font-semibold">28</span>
+            </div>
+          </div>
+
+          <div class="flex gap-2 mt-4">
+            <button class="flex-1 bg-blue-900 text-white py-2 rounded-lg hover:bg-blue-800 transition">
+              Profil
+            </button>
+            <button class="flex-1 border border-blue-900 text-blue-900 py-2 rounded-lg hover:bg-blue-50 transition">
+              Vidéo
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD (copie même style pour les autres joueurs) -->
+      <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/freddo.jpg"
+               class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
+
+          <div class="absolute top-4 right-4 bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-bold">
+            ★ 4.8
+          </div>
+
+          <div class="absolute bottom-4 left-4 bg-blue-900 text-white px-3 py-1 rounded-lg text-sm font-semibold">
+            Milieu
+          </div>
+        </div>
+
+        <div class="p-6 text-blue-900">
+
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <h3 class="text-2xl font-bold">Enzo Rodriguez</h3>
+              <p class="text-blue-700 text-sm">🎯 Meilleur passeur</p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold">19</div>
+              <div class="text-xs text-blue-700">ans</div>
+            </div>
+          </div>
+
+          <div class="space-y-2 mb-4 text-sm">
+            <div class="flex justify-between">
+              <span class="text-gray-500">Buts:</span>
+              <span class="font-semibold">8</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Passes:</span>
+              <span class="font-semibold">18</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Matchs:</span>
+              <span class="font-semibold">26</span>
+            </div>
+          </div>
+
+          <div class="flex gap-2 mt-4">
+            <button class="flex-1 bg-blue-900 text-white py-2 rounded-lg hover:bg-blue-800 transition">
+              Profil
+            </button>
+            <button class="flex-1 border border-blue-900 text-blue-900 py-2 rounded-lg hover:bg-blue-50 transition">
+              Vidéo
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

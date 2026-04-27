@@ -1,0 +1,18 @@
+/* Animation douce pour les liens */
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s;
+}
+
+a:hover::after {
+  width: 100%;
+}

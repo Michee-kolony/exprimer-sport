@@ -1,0 +1,169 @@
+<nav class="bg-white text-black fixed w-full top-0 left-0 z-50 shadow-md">
+  <div class="flex items-center justify-between px-4 py-3 container">
+
+    <!-- Logo -->
+    <img src="images/logo.png" class="text-lg font-bold tracking-wide w-[90px]">
+
+    <!-- MENU DESKTOP -->
+    <ul class="hidden md:flex items-center space-x-6">
+      <li>
+        <a routerLink="/exprimer/home" routerLinkActive="text-blue-600"
+           class="hover:text-blue-600 transition text-decoration-none text-black">
+          Accueil
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/exprimer/about" routerLinkActive="text-blue-600"
+           class="hover:text-blue-600 transition text-decoration-none text-black">
+           Qui sommes-nous
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/exprimer/blog" routerLinkActive="text-blue-600"
+           class="hover:text-blue-600 transition text-decoration-none text-black">
+           Blog
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/exprimer/contact" routerLinkActive="text-blue-600"
+           class="hover:text-blue-600 transition text-decoration-none text-black">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <!-- Bouton menu (mobile seulement) -->
+    <button (click)="toggleMenu()"
+            class="md:hidden focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="h-8 w-8 transition-transform duration-300"
+           [ngClass]="{'rotate-90': isOpen}"
+           fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<!-- OVERLAY (mobile) -->
+<div (click)="toggleMenu()"
+     class="fixed inset-0 bg-black/50 transition-all duration-300 z-40 md:hidden"
+     [ngClass]="{
+       'opacity-100 visible': isOpen,
+       'opacity-0 invisible': !isOpen
+     }">
+</div>
+
+<!-- SIDEBAR (mobile) -->
+<aside class="fixed top-0 left-0 w-64 h-full bg-white text-black z-50 transform transition-transform duration-300 ease-in-out md:hidden"
+       [ngClass]="{
+         'translate-x-0': isOpen,
+         '-translate-x-full': !isOpen
+       }">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between p-4 border-b">
+    <h2 class="text-xl font-bold">Menu</h2>
+
+    <button (click)="toggleMenu()">
+      ✕
+    </button>
+  </div>
+
+  <!-- Liens -->
+  <ul class="p-4 space-y-4">
+
+    <li>
+      <a routerLink="/" (click)="toggleMenu()"
+         routerLinkActive="text-blue-600"
+         class="block hover:text-blue-600 transition">
+        Accueil
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/produits" (click)="toggleMenu()"
+         routerLinkActive="text-blue-600"
+         class="block hover:text-blue-600 transition">
+        Produits
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/services" (click)="toggleMenu()"
+         routerLinkActive="text-blue-600"
+         class="block hover:text-blue-600 transition">
+        Services
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/contact" (click)="toggleMenu()"
+         routerLinkActive="text-blue-600"
+         class="block hover:text-blue-600 transition">
+        Contact
+      </a>
+    </li>
+
+  </ul>
+
+</aside>
+
+
+
+<!-- BOTTOM TABS MENU -->
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 w-[95%] max-w-md bg-[#161F4A] shadow-xl  rounded-2xl z-50 md:hidden">
+
+  <div class="flex justify-around items-center py-3 text-gray-400">
+
+    <!-- ACCUEIL -->
+    <a routerLink="/exprimer/home"
+       routerLinkActive="text-white scale-110"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="flex flex-col items-center text-decoration-none transition text-xs">
+
+      <i class="fas fa-home text-lg mb-1"></i>
+      <span>Accueil</span>
+
+    </a>
+
+    <!-- ACTUALITES -->
+    <a routerLink="/exprimer/blog"
+       routerLinkActive="text-white scale-110"
+       class="flex flex-col items-center text-decoration-none transition text-xs">
+
+      <i class="fas fa-newspaper text-lg mb-1"></i>
+      <span>Actu</span>
+
+    </a>
+
+    <!-- TALENTS -->
+    <a routerLink="/exprimer/talent"
+       routerLinkActive="text-white scale-110"
+       class="flex flex-col items-center text-decoration-none transition text-xs">
+
+      <i class="fas fa-star text-lg mb-1"></i>
+      <span>Talents</span>
+
+    </a>
+
+    <!-- CONTACT -->
+    <a routerLink="/exprimer/contact"
+       routerLinkActive="text-white scale-110"
+       class="flex flex-col items-center text-decoration-none transition text-xs">
+
+      <i class="fas fa-envelope text-lg mb-1"></i>
+      <span>Contact</span>
+
+    </a>
+
+  </div>
+
+</div>
