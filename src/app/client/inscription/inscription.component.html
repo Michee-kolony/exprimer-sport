@@ -1,94 +1,88 @@
-<div class="min-h-screen bg-white flex items-center justify-center p-6" py-32>
-  <div class="max-w-6xl w-full bg-white shadow-2xl rounded-2xl overflow-hidden grid md:grid-cols-2 border">
-    
-    <!-- IMAGE COMPETITION -->
-    <div class="hidden md:block">
-      <img 
-        src="images/WhatsApp Image 2026-04-29 at 12.02.46.jpeg"
-        alt="Football tournoi"
-        class="h-full w-full object-cover"
-      />
-    </div>
+<div class="min-h-screen flex items-center justify-center p-6 bg-cover bg-center relative"
+     style="background-image: url('images/WhatsApp Image 2026-04-29 at 12.02.46.jpeg');">
 
-    <!-- FORMULAIRE -->
-    <div class="p-8">
-      <h2 class="text-3xl font-bold text-blue-900 mb-6">
-        Inscription Tournoi de Football
-      </h2>
+  <!-- OVERLAY DARK -->
+  <div class="absolute inset-0 bg-black/50"></div>
 
-      <form class="space-y-6">
+  <!-- FORMULAIRE -->
+  <div class="relative max-w-4xl w-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 text-white">
 
-        <!-- SECTION 1 -->
-        <div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-4">
-            Informations du responsable
-          </h3>
+    <h2 class="text-3xl font-bold mb-6 text-white">
+      Inscription Tournoi de Football
+    </h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Nom complet"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+    <form class="space-y-6">
 
-            <input type="email" placeholder="Email"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+      <!-- SECTION 1 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-300">
+          Informations du responsable
+        </h3>
 
-            <input type="text" placeholder="Numéro de téléphone"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nom complet"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-            <input type="text" placeholder="Ville / Commune"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
-          </div>
+          <input type="email" placeholder="Email"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+          <input type="text" placeholder="Numéro de téléphone"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+          <input type="text" placeholder="Ville / Commune"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-300">
+          Informations de l'équipe
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nom de l'équipe"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+          <input type="number" placeholder="Nombre de joueurs"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+          <input type="number" placeholder="Nombre de remplaçants"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+          <input type="text" placeholder="Couleur du maillot"
+            class="bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
         </div>
 
-        <!-- SECTION 2 -->
-        <div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-4">
-            Informations de l'équipe
-          </h3>
+        <textarea placeholder="Description de l'équipe (optionnel)"
+          class="w-full mt-4 bg-white/20 border border-white/30 p-3 rounded-lg placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Nom de l'équipe"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+      <!-- UPLOAD LOGO -->
+      <div>
+        <label class="block font-medium mb-2 text-blue-300">
+          Logo de l'équipe
+        </label>
+        <input type="file"
+          class="w-full bg-white/20 border border-white/30 p-2 rounded-lg">
+      </div>
 
-            <input type="number" placeholder="Nombre de joueurs"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+      <!-- PAIEMENT -->
+      <div class="p-4 rounded-lg border border-blue-400 bg-blue-900/30">
+        <p class="font-semibold text-white">
+          ⚠️ Frais de participation : <span class="text-lg">200$</span>
+        </p>
+        <p class="text-sm text-gray-200 mt-1">
+          Le paiement valide définitivement votre inscription au tournoi.
+        </p>
+      </div>
 
-            <input type="number" placeholder="Nombre de remplaçants"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
+      <!-- BOUTON -->
+      <button type="submit"
+        class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition">
+        S'inscrire au tournoi
+      </button>
 
-            <input type="text" placeholder="Couleur du maillot"
-              class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
-          </div>
-
-          <textarea placeholder="Description de l'équipe (optionnel)"
-            class="w-full mt-4 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
-        </div>
-
-        <!-- UPLOAD LOGO -->
-        <div>
-          <label class="block text-blue-900 font-medium mb-2">
-            Logo de l'équipe
-          </label>
-          <input type="file"
-            class="w-full border p-2 rounded-lg">
-        </div>
-
-        <!-- PAIEMENT -->
-        <div class="p-4 rounded-lg border border-blue-200">
-          <p class="text-blue-900 font-semibold">
-            ⚠️ Frais de participation : <span class="text-lg">200$</span>
-          </p>
-          <p class="text-sm text-gray-600 mt-1">
-            Le paiement valide définitivement votre inscription au tournoi.
-          </p>
-        </div>
-
-        <!-- BOUTON -->
-        <button type="submit"
-          class="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold transition">
-          S'inscrire au tournoi
-        </button>
-
-      </form>
-    </div>
+    </form>
   </div>
 </div>
