@@ -5,108 +5,60 @@
     <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
       Blog & Actualités
     </h1>
+
     <p class="text-gray-500 text-lg">
       Découvrez les dernières tendances, conseils et articles.
     </p>
 
     <!-- SEARCH BAR -->
-    <div class="mt-6 relative group overflow-hidden">
+    <div class="mt-6 relative">
       <input
+        id="searchBar"
+        [(ngModel)]="searchText"
+        name="searchText"
         type="text"
         placeholder="Rechercher un article..."
-        class="w-full md:w-96 px-5 py-3 rounded-full border border-gray-300 outline-none transition-all duration-300 
-        group-hover:w-full focus:w-full focus:border-black shadow-sm"
+        class="search-input w-full md:w-96 px-5 py-3 rounded-full border border-gray-300 outline-none transition-all duration-500 shadow-sm"
       />
-      <i
-        class="fa-solid fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-black transition"
-      >
-        
-    </i>
+
+      <i class="fa-solid fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
     </div>
   </div>
 
   <!-- BLOG LIST -->
   <div class="max-w-6xl mx-auto space-y-12">
 
-    <!-- ARTICLE -->
-    <div class="border-b pb-8 flex flex-col md:flex-row gap-6">
-      
+    <div *ngFor="let article of filteredArticles"
+         class="border-b pb-8 flex flex-col md:flex-row gap-6 hover:scale-[1.01] transition">
+
       <!-- IMAGE -->
-      <div class="md:w-1/3">
-        <img src="images/1.webp" 
-             class="w-full h-60 object-cover rounded-xl">
+      <div class="md:w-1/3 overflow-hidden rounded-xl">
+        <img [src]="article.image"
+             class="w-full h-60 object-cover hover:scale-110 transition duration-500">
       </div>
 
       <!-- CONTENT -->
       <div class="md:w-2/3 flex flex-col justify-between">
+
         <div>
-          <span class="text-sm text-blue-800 font-semibold">Fitness</span>
-          <h2 class="text-2xl font-bold text-gray-800 mt-2 transition cursor-pointer">
-            Comment améliorer votre condition physique en 30 jours
+          <span class="text-sm text-blue-800 font-semibold">
+            {{ article.category }}
+          </span>
+
+          <h2 class="text-2xl font-bold text-gray-800 mt-2 cursor-pointer hover:text-blue-900 transition">
+            {{ article.title }}
           </h2>
+
           <p class="text-gray-500 mt-3 leading-relaxed">
-            Découvrez un programme simple et efficace pour transformer votre corps en seulement un mois...
+            {{ article.description }}
           </p>
         </div>
 
         <div class="flex items-center justify-between mt-4 text-sm text-gray-400">
-          <span>Par Admin</span>
-          <span>12 Avril 2026</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ARTICLE -->
-    <div class="border-b pb-8 flex flex-col md:flex-row gap-6">
-      
-      <div class="md:w-1/3">
-        <img src="images/3.webp" 
-             class="w-full h-60 object-cover rounded-xl">
-      </div>
-
-      <div class="md:w-2/3 flex flex-col justify-between">
-        <div>
-          <span class="text-sm text-blue-800 font-semibold">Nutrition</span>
-          <h2 class="text-2xl font-bold text-gray-800 mt-2 transition cursor-pointer">
-            Les meilleurs aliments pour une prise de masse rapide
-          </h2>
-          <p class="text-gray-500 mt-3 leading-relaxed">
-            Une alimentation adaptée est essentielle pour développer votre masse musculaire efficacement...
-          </p>
+          <span>Par {{ article.author }}</span>
+          <span>{{ article.date }}</span>
         </div>
 
-        <div class="flex items-center justify-between mt-4 text-sm text-gray-400">
-          <span>Par Coach John</span>
-          <span>10 Avril 2026</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ARTICLE -->
-    <div class="border-b pb-8 flex flex-col md:flex-row gap-6">
-      
-      <div class="md:w-1/3">
-        <img src="images/1.webp" 
-             class="w-full h-60 object-cover rounded-xl">
-      </div>
-
-      <div class="md:w-2/3 flex flex-col justify-between">
-        <div>
-          <span class="text-sm text-blue-800 font-semibold">Motivation</span>
-          <h2 class="text-2xl font-bold text-gray-800 mt-2 transition cursor-pointer">
-            Comment rester motivé dans votre parcours fitness
-          </h2>
-          <p class="text-gray-500 mt-3 leading-relaxed">
-            La motivation est la clé du succès. Voici des astuces simples pour rester constant...
-          </p>
-        </div>
-
-        <div class="flex items-center justify-between mt-4 text-sm text-gray-400">
-          <span>Par Admin</span>
-          <span>08 Avril 2026</span>
-        </div>
       </div>
 
     </div>

@@ -12,6 +12,8 @@ import { BlogComponent } from './client/blog/blog.component';
 import { ContactComponent } from './client/contact/contact.component';
 import { TalentComponent } from './client/talent/talent.component';
 import { FaqComponent } from './client/faq/faq.component';
+import { InscriptionComponent } from './client/inscription/inscription.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { FaqComponent } from './client/faq/faq.component';
     BlogComponent,
     ContactComponent,
     TalentComponent,
-    FaqComponent
+    FaqComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
